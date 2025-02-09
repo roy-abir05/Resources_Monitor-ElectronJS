@@ -1,8 +1,8 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow, Tray } from "electron";
 import path from "path";
 import { ipcMainHandle, isDev } from "./utils.js";
 import { getStaticData, pollResources } from "./resourceManager.js";
-import { getPreloadPath } from "./pathResolver.js";
+import { getAssetsPath, getPreloadPath } from "./pathResolver.js";
 
 app.on("ready", () => {
   const mainWindow = new BrowserWindow({
